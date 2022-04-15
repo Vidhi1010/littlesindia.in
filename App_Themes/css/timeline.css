@@ -1,0 +1,252 @@
+/** timeline box structure **/
+
+.timeline {
+    list-style: none;
+    padding: 0px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.timeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    border-left: dashed 1px #595959;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+.timeline li {
+    margin-bottom: 25px;
+    position: relative;
+    min-height: 98px;
+}
+
+.timeline li:last-child {
+    margin-bottom: 0px;
+}
+
+{}
+
+.timeline li:before,
+.timeline li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline li:after {
+    clear: both;
+}
+
+.timeline li:before,
+.timeline li:after {
+    content: " ";
+    display: table;
+}
+
+/** timeline panels **/
+
+.timeline li .timeline-panel {
+    width: 46%;
+    float: left;
+    padding: 10px 40px 20px 0px;
+    position: relative;
+}
+
+.timeline li.timeline-inverted .timeline-panel {
+    padding: 10px 0px 20px 40px;
+}
+
+.timeline li .timeline-panel p {
+    text-align: right;
+}
+
+.timeline li.timeline-inverted .timeline-panel p {
+    text-align: left;
+}
+
+/** panel arrows **/
+
+.timeline li .timeline-panel.noarrow:before,
+.timeline li .timeline-panel.noarrow:after {
+    top: 0;
+    right: 0;
+    display: none;
+    border: 0;
+}
+
+.timeline li.timeline-inverted .timeline-panel {
+    float: right;
+}
+
+.timeline li.timeline-inverted .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+}
+
+.timeline li.timeline-inverted .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+}
+
+/** timeline circle icons **/
+
+.timeline li .tl-circ {
+    position: absolute;
+    top: 0px;
+    left: 45.7%;
+    text-align: center;
+    color: #fff;
+    width: 98px;
+    height: 98px;
+    z-index: 999;
+}
+
+.cd-date {
+    display: block;
+    color: #fff;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    text-align: center;
+    top: 36%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.cd-date p {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 12px;
+    margin-top: -5px;
+}
+
+/** timeline content **/
+
+.tl-body p,
+.tl-body ul {
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+.tl-body>p+p {
+    margin-top: 5px;
+}
+
+/** media queries **/
+
+@media (max-width: 767px) {
+    .tl-body {
+        padding: 0px 0px 0px 25px;
+    }
+    .cd-date {
+        top: 47% !important;
+        left: 21%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .timeline li .tl-circ {
+        left: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline li .tl-circ {
+        left: 43.4%;
+    }
+    .timeline li .timeline-panel {
+        padding: 20px 20px 20px 0px;
+    }
+    .timeline li.timeline-inverted .timeline-panel {
+        padding: 20px 0px 20px 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .timeline li .timeline-panel {
+        width: 44%;
+    }
+}
+
+@media (max-width: 700px) {
+    .timeline li .tl-circ {
+        position: absolute;
+        top: 0px;
+        left: 0%;
+        text-align: center;
+        color: #fff;
+        width: 68px;
+        height: 68px;
+        z-index: 999;
+    }
+    .timeline li .timeline-panel {
+        width: 46%;
+        float: left;
+        padding: 10px 10px 10px 0px;
+        position: relative;
+    }
+    .timeline li.timeline-inverted .timeline-panel {
+        padding: 10px 10px 10px 0px;
+    }
+    .timeline li .timeline-panel p {
+        text-align: left;
+    }
+    .timeline li.timeline-inverted .timeline-panel p {
+        text-align: left;
+    }
+    .cd-date {
+        top: 31%;
+        font-size: 18px;
+    }
+    .cd-date p {
+        text-transform: uppercase;
+        color: #FFFFFF;
+        font-size: 10px;
+        margin-top: -5px;
+    }
+    .page-header h1 {
+        font-size: 1.8em;
+    }
+    ul.timeline:before {
+        left: 40px;
+    }
+    .tldate {
+        width: 140px;
+    }
+    ul.timeline li .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+    ul.timeline li .tl-circ {
+        top: 0%;
+        left: 0.7%;
+        margin-left: 0;
+    }
+    ul.timeline>li>.tldate {
+        margin: 0;
+    }
+    ul.timeline>li>.timeline-panel {
+        float: right;
+    }
+    ul.timeline>li>.timeline-panel:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+    ul.timeline>li>.timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+    }
+}

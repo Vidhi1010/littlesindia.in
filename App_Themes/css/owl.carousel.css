@@ -1,0 +1,178 @@
+.owl-carousel .owl-wrapper:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+/* Styling Pagination*/
+
+.owl-theme .owl-controls {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+    color: #FFF;
+    zoom: 1;
+    margin: 0px;
+    font-size: 24px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background: #eb4938;
+    filter: Alpha(Opacity=50);
+    opacity: 0.8;
+    height: 50px;
+    width: 50px;
+    padding-top: 7px;
+    margin: 0px 1%;
+}
+
+/* Clickable class fix problem with hover on touch devices */
+
+/* Use it for non-touch hover action */
+
+.owl-theme .owl-controls.clickable .owl-buttons div:hover {
+    filter: Alpha(Opacity=100);
+    /*IE7 fix*/
+    opacity: 1;
+    text-decoration: none;
+}
+
+.owl-buttons {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+
+.owl-prev {
+    left: 0px;
+    float: left;
+}
+
+.owl-prev:before {
+    content: "\e257";
+    font-family: 'Glyphicons Halflings';
+    color: #ffffff;
+}
+
+.owl-next {
+    right: 0px;
+    float: right;
+}
+
+.owl-next:before {
+    content: "\e258";
+    font-family: 'Glyphicons Halflings';
+    color: #ffffff;
+}
+
+.owl-pagination {
+    position: absolute;
+    top: -40px;
+    text-align: center;
+    width: 100%;
+}
+
+.owl-theme .owl-controls .owl-page {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    /*IE7 life-saver */
+}
+
+.owl-theme .owl-controls .owl-page span {
+    display: block;
+    width: 11px;
+    height: 11px;
+    margin: 5px 3px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background: #dbdbdb;
+}
+
+.owl-theme .active span {
+    background: #01448f !important;
+}
+
+/* display none until init */
+
+.owl-carousel {
+    display: none;
+    position: relative;
+    width: 100%;
+    -ms-touch-action: pan-y;
+    float: left;
+    margin-top: 60px;
+}
+
+.owl-carousel .owl-wrapper {
+    display: none;
+    position: relative;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    /*height:auto!important;*/
+}
+
+.carousel-height {
+    height: auto !important;
+}
+
+.owl-carousel .owl-wrapper-outer.autoHeight {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+.owl-carousel .owl-item {
+    float: left;
+}
+
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+    cursor: pointer;
+}
+
+.owl-controls {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+
+.grabbing {
+    cursor: url(../images/grabbing.png) 8 8, move;
+}
+
+/* fix */
+
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+}
+
+@media all and (max-width:767px) {
+    .owl-theme .owl-controls .owl-buttons div {
+        margin: 0px -5%;
+    }
+}

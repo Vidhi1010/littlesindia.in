@@ -1,0 +1,122 @@
+.wmg-container {
+    filter: alpha(opacity=0);
+    font-family: empty;
+    font-size: 0px;
+    opacity: 0.0;
+    position: relative;
+    width: 100%;
+    zoom: 1;
+}
+
+.wmg-container>* {
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.wmg-container img {
+    max-width: 100%;
+}
+
+.wmg-item {
+    display: inline-block;
+    *display: inline;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50% !important;
+    padding: 0px !important;
+    height: auto !important;
+}
+
+.wmg-thumbnail {
+    height: 100%;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.wmg-arrow {
+    border-bottom: 20px solid;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    bottom: -30px;
+    display: none;
+    height: 0;
+    position: absolute;
+    width: 0;
+    z-index: 2;
+}
+
+.wmg-thumbnail-content {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.wmg-thumbnail-content img {
+    vertical-align: middle;
+}
+
+.wmg-details {
+    left: 0px;
+    overflow: hidden;
+    position: absolute;
+    width: 99%;
+}
+
+.wmg-close {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    z-index: 2;
+}
+
+.wmg-details-content {
+    height: auto;
+}
+
+.wmg-thumbnail {
+    cursor: pointer;
+}
+
+.wmg-arrow {
+    border-bottom-color: #A7E9F5;
+}
+
+.wmg-close {
+    background: url(../images/close.png) no-repeat 0px 0px;
+    display: block;
+    height: 31px;
+    right: 20px;
+    top: 10px;
+    width: 31px;
+}
+
+.wmg-details-content {
+    background: url(../images/product-bg-inner.jpg) repeat left top;
+}
+
+.exemplo {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+@media all and (max-width:786px) {
+    .wmg-item {
+        width: 47% !important;
+    }
+}
+
+@media all and (max-width:767px) {
+    .wmg-item {
+        width: 100% !important;
+        text-align: center !important;
+    }
+}
+
+@media all and (max-width:560px) {
+    .wmg-thumbnail {
+        width: 92%;
+    }
+}
